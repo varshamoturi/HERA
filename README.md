@@ -38,6 +38,3 @@ The important files from repository:
 
 
 
----
-
-Feel free to adjust the section headings or content as needed!
