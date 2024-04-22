@@ -20,7 +20,7 @@ node server.js
 
 ## Usage
 
-To access the login page, open [https://hera-421105.uw.r.appspot.com](HERA) in your web browser.
+To access the login page, open (https://hera-421105.uw.r.appspot.com) in your web browser.
 
 ## Files
 
