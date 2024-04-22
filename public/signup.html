@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .bg {
+            background-image: url('images/signup-bg.jpg');
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .signup-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 450px;
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .signup-form input[type='text'],
+        .signup-form input[type='email'],
+        .signup-form input[type='password'],
+        .signup-form input[type='date'],
+        .signup-form select,
+        .signup-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .signup-form button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .signup-form button:hover {
+            background-color: #45a049;
+        }
+
+        .signup-form h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .signup-form hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .signup-form label {
+            font-weight: bold;
+        }
+
+        .terms {
+            color: grey;
+            font-size: 12px;
+        }
+
+        .signup-form .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .signup-form .action-buttons a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #hobbies label {
+            font-weight: normal;
+        }
+
+/* Style for radio buttons and their labels */
+        .radio-label {
+             display: inline-block; /* Aligns the label next to the radio button */
+             margin-right: 10px; /* Adds some space between the radio buttons */
+        }
+
+/* You may also want to style the checkboxes for hobbies to be aligned properly */
+        #hobbies input[type='checkbox'] {
+            margin-right: 5px; /* Adds some space between the checkbox and its label */
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg">
+    <div class="signup-container">
+        <form class="signup-form" action="/signup" method="post">
+            <h1>Signup</h1>
+            <hr>
+            
+            <div class="page active" id="page1">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Other">Other</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+
+                <label for="address1">Address:</label>
+                <input type="text" id="address1" name="address1" placeholder="Address Line 1" required>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="City" required>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" placeholder="State" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+
+                <label for="phone-number">Phone Number:</label>
+                <input type="text" id="phone-number" name="phone-number" placeholder="Your phone number" required>
+
+                <button type="button" onclick="showPage(2)">Next</button>
+            </div>
+
+            <div class="page" id="page2">
+                <!-- Additional fields for page 2 -->
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" placeholder="Your occupation" required>
+            
+                <label for="education">Education Level:</label>
+                <select name="education" id="education" required>
+                    <option value="High School">High School</option>
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Graduate">Graduate</option>
+                    <option value="Postgraduate">Postgraduate</option>
+                </select>
+            
+                <label for="relationship">Relationship Status:</label>
+                <select name="relationship" id="relationship" required>
+                    <option value="Single">Single</option>
+                    <option value="In a relationship">In a relationship</option>
+                    <option value="Married">Married</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widowed">Widowed</option>
+                </select>
+            
+                <div>
+                    <label>Are you a parent?</label>ß
+                    <div>
+                        <input type="radio" id="parent_yes" name="parent" value="Yes" required>
+                        <label for="parent_yes">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="parent_no" name="parent" value="No">
+                        <label for="parent_no">No</label>
+                    </div>
+                </div>
+            
+               
+                <div class="clearfix"></div>
+                <label for="preferredLocation">Preferred Locations for Matches/Events:</label>
+                <select name="preferredLocation" id="preferredLocation" required>
+                    <option value="Near current location">Near current location</option>
+                    <option value="Anywhere in United States">Anywhere in United States</option>
+                    <option value="Specific city or state">Specific city or state</option>
+                </select>
+                
+                <!-- Hobbies should be within a div or fieldset, not select -->
+                <fieldset id="hobbies">
+                    <legend>Hobbies:</legend>
+                    <label><input type="checkbox" name="hobbies" value="Reading"> Reading</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Traveling"> Traveling</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Fitness and Exercise"> Fitness and Exercise</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Cooking and Baking"> Cooking and Baking</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Music"> Music</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Outdoor Activities"> Outdoor Activities</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Art and Creativity"> Art and Creativity</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Sports"> Sports</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Gaming"> Gaming (Video gaming, board games, card games, and online gaming)</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Volunteering"> Volunteering and Community Service</label><br>
+                    <label><input type="checkbox" name="hobbies" value="Other"> Other</label><br>
+                </fieldset>
+
+            
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required>
+            
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    I consent to the processing of my personal data.
+                </label>
+            
+                <!-- Navigation and submission buttons -->
+                <button type="button" onclick="showPage(1)">Back</button>
+                <button type="submit">Create Account</button>
+            
+                <p class="terms">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+            </div>
+            
+
+<script>
+    function showPage(page) {
+        var pages = document.querySelectorAll('.page');
+        pages.forEach(p => p.classList.remove('active'));
+        document.querySelector('#page' + page).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
