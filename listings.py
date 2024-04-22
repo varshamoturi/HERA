@@ -9,7 +9,7 @@ user1='juancraig'
 user2='kathleenrobbinsmd'
 events,city=events_gen(user1,user2,df)
 # Set your Google Maps API key here
-api_key = "AIzaSyD_KLpCJowoUVbniRSz2RaMBTGtRS3jt5g"
+api_key = "your-API-key"
 listings=[]
 #events=None
 
@@ -41,4 +41,3 @@ def get_listings(api_key, events, city):
 
 
 print(get_listings(api_key,events,city))
-#print(len(get_listings(api_key,events,city)))

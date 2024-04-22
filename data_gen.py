@@ -33,7 +33,7 @@ def events_gen(user1,user2,df):
             combined_data[column] = (data_1[column], data_2[column])
 
     # Set up OpenAI API key
-    openai.api_key = "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"
+    openai.api_key = "your-API-KEys"
     if combined_data:
     # Generate text indicating the combined activities along with other columns
         prompt = "the two people's individual information in tuple and combined activities:\n"
