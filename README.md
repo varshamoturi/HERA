@@ -16,7 +16,12 @@ To run HERA locally, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Navigate to the project directory.
-3. Start the server:
+3. generate your requirements:
+   ```bash
+    npm list --depth=0 --parseable | grep node_modules | sed 's/.*node_modules\///' > requirements.txt
+    ```
+4. Install requirements.txt
+5. Start the server:
 
 ```bash
 node server.js
