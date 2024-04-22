@@ -1,9 +1,10 @@
 
+
 # HERA: 
 
 ## Overview
 
-HERA is a [brief description of your application's purpose or functionality].
+HERA is more than a dating app; she's your friend, guide, and matchmaker. With advanced AI, HERA crafts personalized matches and unforgettable experiences tailored to your interests. In a world craving genuine connections, HERA revolutionizes how we bond and find love. Welcome to HERA – where meaningful connections feel effortless.
 
 ## Installation
 
@@ -19,7 +20,7 @@ node server.js
 
 ## Usage
 
-To use HERA, [provide instructions on how to use your application]. You may include information on how to access it in a web browser, or any command-line options available.
+To access the login page, open [https://hera-421105.uw.r.appspot.com](HERA) in your web browser.
 
 ## Files
 
@@ -27,29 +28,28 @@ The repository contains the following files:
 
 - **data**: [Description of the data folder contents]
 - **node_modules**: [Description of the node_modules folder contents]
-- **public**: [Description of the public folder contents]
-- **.DS_Store**: [Description of the .DS_Store file]
-- **README.md**: This README file.
-- **app.yaml**: [Description of the app.yaml file]
+- **public**: Contains HTML files for login and signup.
+  - **login.html**: HTML file for the login page.
+  - **signup.html**: HTML file for the signup page.
+
 - **data_gen.py**: [Description of the data_gen.py file]
 - **google_req.py**: [Description of the google_req.py file]
 - **listings.py**: [Description of the listings.py file]
-- **package-lock.json**: [Description of the package-lock.json file]
-- **package.json**: [Description of the package.json file]
+
 - **server.js**: [Description of the server.js file]
 
 ## Contributing
 
-Contributions to HERA are welcome! If you have any ideas for improvements or find any issues, please open an issue or submit a pull request.
+Contributions are welcome! Open an issue or submit a pull request.
 
 ## License
 
-[Include information about the license under which your application is released, if applicable.]
+[Include license information]
 
 ## Contact
 
-For questions or support, please contact [your contact information].
+For questions or support, contact [your information].
 
 ---
 
-Feel free to customize this template to better fit your application's specific needs!
+Feel free to adjust the section headings or content as needed!
