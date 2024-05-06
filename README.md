@@ -8,7 +8,7 @@ HERA is more than a dating app; she's your friend, guide, and matchmaker. With a
 
 ## Usage
 
-To access the login page, open (https://hera-421105.uw.r.appspot.com) in your web browser.
+To access the login page, open (https://hera-3yacnszsta-uc.a.run.app) in your web browser.
 
 ## Installation
 
